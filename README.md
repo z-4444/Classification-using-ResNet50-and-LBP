@@ -25,14 +25,16 @@ The ResNet50 model is loaded with pre-trained weights from ImageNet, and the las
 The model is trained on 12000 images and tested on 3000 images. The images are randomly split into training and testing sets using a 80:20 ratio. The features extracted from the images are normalized using StandardScaler before training the SVM classifier. The SVM classifier is trained using an RBF kernel with a regularization parameter of C=10 and a gamma value of 'auto'.
 
 ## Evaluation Metrics
-The model is evaluated using accuracy, precision, recall, and F1 score metrics.
-Accuracy: 0.99
-Precision: 0.99
-Recall: 0.99
-F1 score: 0.99
+The model is evaluated using accuracy, precision, recall, and F1 score metrics. <br />
+Accuracy:    0.99 <br />
+Precision:   0.99 <br />
+Recall:      0.99  <br />
+F1 score:    0.99 <br />
 
 The confusion matrix is also generated to visualize the performance of the model.
+
 ![confusion matrix](https://user-images.githubusercontent.com/105338831/229350287-75194225-8fa2-407c-86c6-0e77e245afbd.png)
+
 
 ## Usage
 To run the model, follow these steps:
@@ -57,23 +59,21 @@ The following Python packages are required to run the model:
 You can pull my docker image from [here](https://hub.docker.com/repository/docker/mzahid4444/fruit_classify/general).
 To pull run following commond.
 
- ``` docker push mzahid4444/fruit_classify:tagname 
-62
-my image name is fruit_classify but it is for shoe_classify```
+ ``` docker push mzahid4444/fruit_classify:tagname  ```
 > **Note**
 > Note that the image name is fruit_classify but it is actually for a shoe classifier.
 
-Following are some commonds that are for built, delete, run and save the image
+Following are some commonds that are for built, delete, run and save the image. <br />
 
-To build the Docker image, navigate to the directory containing the Dockerfile and run the following command:
-``` sudo docker build -t footwear-classifier . ```
-To delete the Docker image, use the following command:
-``` sudo docker rmi --force footwear-classifier ```
-To run the Docker image, use the following command:
-``` sudo docker run -p 5000:5000 footwear-classifier ```
-This command maps port 5000 on your local machine to port 5000 on the Docker container.
+To build the Docker image, navigate to the directory containing the Dockerfile and run the following command: <br />
+``` sudo docker build -t footwear-classifier . ``` <br />
+To delete the Docker image, use the following command: <br />
+``` sudo docker rmi --force footwear-classifier ``` <br />
+To run the Docker image, use the following command: <br />
+``` sudo docker run -p 5000:5000 footwear-classifier ``` <br />
+This command maps port 5000 on your local machine to port 5000 on the Docker container. <br />
 
-To save the Docker image to a tar file, use the following command:
-``` sudo docker save ImageId -o fName.tar ```
+To save the Docker image to a tar file, use the following command: <br />
+``` sudo docker save ImageId -o fName.tar ``` <br />
 Replace ImageId with the ID of the Docker image you want to save and fName.tar with the desired name for the tar file.
 
