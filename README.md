@@ -57,13 +57,23 @@ The following Python packages are required to run the model:
 You can pull my docker image from [here](https://hub.docker.com/repository/docker/mzahid4444/fruit_classify/general).
 To pull run following commond.
 
-docker push mzahid4444/fruit_classify:tagname
+ ``` docker push mzahid4444/fruit_classify:tagname 
+62
+my image name is fruit_classify but it is for shoe_classify```
 > **Note**
 > Note that the image name is fruit_classify but it is actually for a shoe classifier.
 
 Following are some commonds that are for built, delete, run and save the image
-Show all Images: 		sudo docker images
-Built Image:			sudo docker build -t footwear-classifier .
-Delete Image: 			sudo docker rmi --force footwear-classifier
-Run Docker Image:		sudo docker run -p 5000:5000 footwear-classifier
-Save Image to tar:		sudo docker save ImageId -o fName.tar
+
+To build the Docker image, navigate to the directory containing the Dockerfile and run the following command:
+``` sudo docker build -t footwear-classifier . ```
+To delete the Docker image, use the following command:
+``` sudo docker rmi --force footwear-classifier ```
+To run the Docker image, use the following command:
+``` sudo docker run -p 5000:5000 footwear-classifier ```
+This command maps port 5000 on your local machine to port 5000 on the Docker container.
+
+To save the Docker image to a tar file, use the following command:
+``` sudo docker save ImageId -o fName.tar ```
+Replace ImageId with the ID of the Docker image you want to save and fName.tar with the desired name for the tar file.
+
